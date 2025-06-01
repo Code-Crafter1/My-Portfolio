@@ -1,4 +1,5 @@
-import "./App.css";
+import { useState } from "react";
+
 import About from "./components/about";
 import Contact from "./components/contact";
 import Home from "./components/home";
@@ -7,28 +8,30 @@ import Projects from "./components/projects";
 import Skills from "./components/skills";
 
 function App() {
-  return (
-    <>
-      <Navbar />
+  const [activeSection, setActiveSection] = useState("home");
 
-      <main className="text-white bg-gradient-to-br from-slate-900 to-slate-800 scroll-smooth">
-        <section id="home">
-          <Home />
-        </section>
-        <section id="about">
-          <About />
-        </section>
-        <section id="projects">
-          <Projects />
-        </section>
-        <section id="skills">
-          <Skills />
-        </section>
-        <section id="contact">
-          <Contact />
-        </section>
-      </main>
-    </>
+  const renderSection = () => {
+    switch (activeSection) {
+      case "home":
+        return <Home />;
+      case "about":
+        return <About />;
+      case "projects":
+        return <Projects />;
+      case "skills":
+        return <Skills />;
+      case "contact":
+        return <Contact />;
+      default:
+        return <Home />;
+    }
+  };
+
+  return (
+    <div>
+      <Navbar setActiveSection={setActiveSection} />
+      <main>{renderSection()}</main>
+    </div>
   );
 }
 
