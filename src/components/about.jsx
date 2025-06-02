@@ -1,34 +1,66 @@
-const About = () => {
+const About = ({ innerRef }) => {
   return (
-    <section id="about" className="bg-[#0f0f0f] text-white py-16 px-4">
-      {/* Heading */}
-      <div className="text-center mb-12">
-        <h2 className="text-5xl font-bold text-cyan-400">About Me</h2>
-        <p className="text-gray-400 mt-4 text-lg">
-          Let’s get to know each other
-        </p>
+    <section
+      id="about"
+      ref={innerRef}
+      className="bg-[#0f0f0f] text-white py-20 px-6 scroll-mt-24"
+    >
+      {/* Section Heading */}
+      <div className="text-center mt-8 mb-16">
+        <h2 className="text-5xl font-bold">
+          <span className="bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text">
+            About Me
+          </span>
+        </h2>
       </div>
 
-      {/* Content */}
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-12">
-        {/* Profile Image */}
-        <div className="w-48 h-48 md:w-60 md:h-60 bg-[#1a1a1a] rounded-full overflow-hidden shadow-inner hover:shadow-[0_0_30px_#00FFFF] transition-shadow duration-300">
-          <img
-            src="/your-image.jpg" // <-- Replace with your image path or URL
-            alt="Your Name"
-            className="w-full h-full object-cover"
-          />
+      {/* Content Section */}
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-14">
+        {/* Image Box */}
+        <div className="w-full md:w-1/2 flex justify-center">
+          <div className="w-72 h-85 bg-[#1a1a1a] shadow-lg overflow-hidden rounded-xl">
+            <img
+              src="/your-image.jpg"
+              alt="Sakshi"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
 
-        {/* Text */}
-        <div className="text-center md:text-left max-w-xl">
-          <h3 className="text-3xl font-semibold mb-4">Hi, I’m [Your Name]</h3>
-          <p className="text-gray-300 text-lg leading-relaxed">
-            I’m a passionate front-end developer who loves turning ideas into
-            elegant, interactive web experiences. From pixel-perfect designs to
-            scalable components, I enjoy building modern UIs using tools like
-            React.js, Tailwind CSS, and more.
+        {/* Content Box */}
+        <div className="w-full md:w-1/2 text-left space-y-4">
+          <p className="text-gray-300 text-lg">
+            I'm <span className="text-pink-400 font-semibold">Sakshi</span>, a
+            frontend developer driven by creativity and curiosity. I specialize
+            in crafting modern, responsive web apps using the{" "}
+            <span className="text-green-400 font-medium">MERN</span> stack.
           </p>
+
+          <ul className="text-gray-300 space-y-3 text-base">
+            <li>
+              🛠️ <span className="text-white font-semibold">Tech Stack:</span>{" "}
+              React.js, Node.js, Express.js, MongoDB, Tailwind CSS
+            </li>
+            <li>
+              💡{" "}
+              <span className="text-white font-semibold">
+                Currently Exploring:
+              </span>{" "}
+              TypeScript, Next.js, Framer Motion
+            </li>
+            <li>
+              🧰 <span className="text-white font-semibold">Tools:</span> Git,
+              GitHub, VS Code, Vercel, Netlify
+            </li>
+            <li>
+              🚀 <span className="text-white font-semibold">Passion:</span>{" "}
+              Clean UI, smooth UX, and scalable frontend architecture
+            </li>
+            <li>
+              🎯 <span className="text-white font-semibold">Fun Fact:</span> I
+              debug faster while listening to Taylor Swift 🎧💻
+            </li>
+          </ul>
         </div>
       </div>
     </section>

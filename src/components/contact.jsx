@@ -14,7 +14,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="bg-[#0f0f0f] text-white py-16 px-4">
+    <section
+      id="contact"
+      className="bg-[#0f0f0f] text-white pt-28 pb-20 px-4 scroll-mt-20"
+    >
       {/* Section Heading */}
       <div className="text-center mb-12">
         <h2 className="text-5xl font-bold">

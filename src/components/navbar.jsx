@@ -17,7 +17,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
-    setActiveSection(id); // update immediately on click
+    setActiveSection(id);
     setIsOpen(false);
   };
 
@@ -25,9 +25,42 @@ const Navbar = ({ activeSection, setActiveSection }) => {
     <nav className="w-full bg-[#0f0f0f] text-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <div className="text-3xl font-extrabold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-transparent bg-clip-text drop-shadow-lg font-[Pacifico]">
-            Sakshi
+          <div className="flex items-center space-x-2 -ml-14">
+            <svg
+              viewBox="0 0 200 120"
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-[210px] h-[130px]"
+            >
+              <g transform="translate(100, 60) scale(1.5)">
+                <path
+                  d="M -35 0
+         C -35 -20, -15 -20, -5 0
+         C 5 20, 25 20, 35 0
+         C 25 -20, 5 -20, -5 0
+         C -15 20, -35 20, -35 0
+         Z"
+                  fill="url(#grad)"
+                />
+                <defs>
+                  <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stopColor="#ec4899" />
+                    <stop offset="100%" stopColor="#f97316" />
+                  </linearGradient>
+                </defs>
+                <text
+                  x="0"
+                  y="6"
+                  textAnchor="middle"
+                  fontFamily="Georgia, 'Times New Roman', serif"
+                  fontSize="18"
+                  fontWeight="600"
+                  fill="white"
+                  style={{ fontStyle: "italic", letterSpacing: "1px" }}
+                >
+                  Sakshi
+                </text>
+              </g>
+            </svg>
           </div>
 
           {/* Desktop Nav */}
