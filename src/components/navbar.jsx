@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 
-const Navbar = ({ setActiveSection }) => {
+const Navbar = ({ activeSection, setActiveSection }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
@@ -12,56 +12,55 @@ const Navbar = ({ setActiveSection }) => {
     { label: "Contact", section: "contact" },
   ];
 
+  const handleClick = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setActiveSection(id); // update immediately on click
+    setIsOpen(false);
+  };
+
   return (
     <nav className="w-full bg-[#0f0f0f] text-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          {/* <div className="text-3xl font-extrabold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-transparent bg-clip-text drop-shadow-lg font-[Pacifico]">
+          <div className="text-3xl font-extrabold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-transparent bg-clip-text drop-shadow-lg font-[Pacifico]">
             Sakshi
-          </div> */}
-          {/* Logo + Name */}
-          <div className="flex items-center space-x-2">
-            {/* Logo Icon */}
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-500 flex items-center justify-center">
-              <span className="text-white text-sm font-bold">M</span>{" "}
-              {/* Temporary Icon */}
-            </div>
-
-            {/* Name */}
-            <div className="text-3xl font-extrabold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-transparent bg-clip-text drop-shadow-lg font-[Pacifico]">
-              Sakshi
-            </div>
           </div>
 
-          {/* Desktop Nav Items */}
+          {/* Desktop Nav */}
           <div className="hidden md:flex space-x-6">
             {navItems.map(({ label, section }) => (
               <button
                 key={section}
-                onClick={() => setActiveSection(section)}
-                className="relative group text-lg font-medium transition-all duration-300"
+                onClick={() => handleClick(section)}
+                className={`relative group text-lg font-medium transition-all duration-300 ${
+                  activeSection === section ? "text-pink-400" : "text-white"
+                }`}
               >
-                <span className="text-white group-hover:text-pink-400 transition">
-                  {label}
-                </span>
-                <span className="block h-[2px] max-w-0 group-hover:max-w-full transition-all duration-300 bg-pink-500"></span>
+                {label}
+                <span
+                  className={`block h-[2px] ${
+                    activeSection === section ? "max-w-full" : "max-w-0"
+                  } transition-all duration-300 bg-pink-500`}
+                ></span>
               </button>
             ))}
           </div>
 
-          {/* CTA Button Desktop */}
+          {/* Desktop CTA */}
           <div className="hidden md:block">
-            <a
-              href="#contact"
-              onClick={() => setActiveSection("contact")}
+            <button
+              onClick={() => handleClick("contact")}
               className="bg-gradient-to-r from-pink-500 to-orange-400 text-white px-5 py-2 rounded-full shadow-lg font-semibold hover:scale-105 transform transition duration-300"
             >
               Connect With Me!
-            </a>
+            </button>
           </div>
 
-          {/* Hamburger Icon */}
+          {/* Mobile Toggle */}
           <div className="md:hidden">
             <button onClick={() => setIsOpen(!isOpen)}>
               {isOpen ? (
@@ -80,29 +79,20 @@ const Navbar = ({ setActiveSection }) => {
           {navItems.map(({ label, section }) => (
             <button
               key={section}
-              onClick={() => {
-                setActiveSection(section);
-                setIsOpen(false);
-              }}
-              className="block w-full text-left text-lg font-medium hover:text-pink-400 transition"
+              onClick={() => handleClick(section)}
+              className={`block w-full text-left text-lg font-medium ${
+                activeSection === section ? "text-pink-400" : "text-white"
+              }`}
             >
               {label}
             </button>
           ))}
-
-          {/* Mobile CTA */}
-          <div>
-            <a
-              href="#contact"
-              onClick={() => {
-                setActiveSection("contact");
-                setIsOpen(false);
-              }}
-              className="block text-center bg-gradient-to-r from-pink-500 to-orange-400 text-white px-5 py-2 rounded-full shadow-lg font-semibold hover:scale-105 transform transition duration-300"
-            >
-              Connect With Me!
-            </a>
-          </div>
+          <button
+            onClick={() => handleClick("contact")}
+            className="block w-full text-center bg-gradient-to-r from-pink-500 to-orange-400 text-white px-5 py-2 rounded-full shadow-lg font-semibold hover:scale-105 transform transition duration-300"
+          >
+            Connect With Me!
+          </button>
         </div>
       )}
     </nav>
