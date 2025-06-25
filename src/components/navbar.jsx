@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 
-const Navbar = ({ activeSection, setActiveSection }) => {
+const Navbar = ({ activeSection, setActiveSection, setShowTimeline }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [

@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 const projects = [
   {
     title: "Portfolio Website",
@@ -38,10 +40,15 @@ const projects = [
 ];
 
 const Projects = () => {
+  const navigate = useNavigate();
+
+  const handleShowMore = () => {
+    navigate("/projects/timeline");
+  };
+
   return (
     <section
       id="projects"
-      //   className="bg-[#0f0f0f] text-white py-20 px-4 scroll-mt-20"
       className="bg-[#0f0f0f] text-white pt-28 pb-20 px-4 scroll-mt-20"
     >
       {/* Section Heading */}
@@ -95,7 +102,16 @@ const Projects = () => {
 
       {/* Show More Button */}
       <div className="text-center mt-14">
-        <button className="border border-white px-8 py-3 text-white rounded-full hover:bg-white hover:text-black transition duration-300">
+        {/* <button
+          onClick={handleShowMore}
+          className="border border-white px-8 py-3 text-white rounded-full hover:bg-white hover:text-black transition duration-300"
+        >
+          Show More →
+        </button> */}
+        <button
+          onClick={() => navigate("/projects/timeline")}
+          className="border border-white px-8 py-3 text-white rounded-full hover:bg-white hover:text-black transition duration-300"
+        >
           Show More →
         </button>
       </div>

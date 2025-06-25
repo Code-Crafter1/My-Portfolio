@@ -1,13 +1,21 @@
 import { useEffect, useRef, useState } from "react";
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
+
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
+import Project from "./components/Project/Project"; // timeline page
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 
-function App() {
+// ✅ Landing Page (with intersection logic)
+const LandingPage = () => {
   const [activeSection, setActiveSection] = useState("home");
 
   const sectionsRef = {
@@ -27,31 +35,33 @@ function App() {
     };
 
     const observer = new IntersectionObserver((entries) => {
-      const visibleEntry = entries.find((entry) => entry.isIntersecting);
-      if (visibleEntry) {
-        setActiveSection(visibleEntry.target.id);
+      const visible = entries.find((entry) => entry.isIntersecting);
+      if (visible) {
+        setActiveSection(visible.target.id);
       }
     }, observerOptions);
 
-    const sectionElements = Object.values(sectionsRef).map(
-      (ref) => ref.current
-    );
-    sectionElements.forEach((el) => {
-      if (el) observer.observe(el);
-    });
+    const elements = Object.values(sectionsRef).map((ref) => ref.current);
+    elements.forEach((el) => el && observer.observe(el));
 
     return () => {
-      sectionElements.forEach((el) => {
-        if (el) observer.unobserve(el);
-      });
+      elements.forEach((el) => el && observer.unobserve(el));
     };
   }, []);
 
+  const scrollToSection = (id) => {
+    const el = sectionsRef[id]?.current;
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+      setActiveSection(id);
+    }
+  };
+
   return (
-    <div>
+    <>
       <Navbar
         activeSection={activeSection}
-        setActiveSection={setActiveSection}
+        setActiveSection={scrollToSection}
       />
       <main className="scroll-smooth">
         <section id="home" ref={sectionsRef.home}>
@@ -71,8 +81,37 @@ function App() {
         </section>
       </main>
       <Footer />
-    </div>
+    </>
   );
-}
+};
+
+// ✅ Timeline Page
+const TimelinePage = () => (
+  <>
+    <Navbar activeSection="projects" setActiveSection={() => {}} />
+    <Project />
+    <Footer />
+  </>
+);
+
+// ✅ Router Setup
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <LandingPage />,
+  },
+  {
+    path: "/projects/timeline",
+    element: <TimelinePage />,
+  },
+  {
+    path: "*",
+    element: <Navigate to="/" replace />,
+  },
+]);
+
+const App = () => {
+  return <RouterProvider router={router} />;
+};
 
 export default App;

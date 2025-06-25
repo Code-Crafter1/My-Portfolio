@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 
 const Contact = () => {
