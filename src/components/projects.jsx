@@ -47,10 +47,7 @@ const Projects = () => {
   };
 
   return (
-    <section
-      id="projects"
-      className="bg-[#0f0f0f] text-white pt-28 pb-20 px-4 scroll-mt-20"
-    >
+    <div className="bg-[#0f0f0f] text-white pt-28 pb-20 px-4">
       {/* Section Heading */}
       <div className="text-center mb-9">
         <h2 className="text-5xl font-extrabold mb-3">
@@ -113,20 +110,14 @@ const Projects = () => {
 
       {/* Show More Button */}
       <div className="text-center mt-14">
-        {/* <button
-          onClick={handleShowMore}
-          className="border border-white px-8 py-3 text-white rounded-full hover:bg-white hover:text-black transition duration-300"
-        >
-          Show More →
-        </button> */}
         <button
-          onClick={() => navigate("/projects/timeline")}
+          onClick={handleShowMore}
           className="border border-white px-8 py-3 text-white rounded-full hover:bg-white hover:text-black transition duration-300"
         >
           Show More →
         </button>
       </div>
-    </section>
+    </div>
   );
 };
 

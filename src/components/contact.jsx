@@ -28,6 +28,9 @@ const Contact = () => {
     if (data.success) {
       setResult("Form Submitted Successfully");
       event.target.reset();
+      setForm({ name: "", email: "", message: "" });
+
+      setTimeout(() => setResult(""), 1000);
     } else {
       console.log("Error", data);
       setResult(data.message);
@@ -36,10 +39,7 @@ const Contact = () => {
   };
 
   return (
-    <section
-      id="contact"
-      className="bg-[#0f0f0f] text-white pt-28 pb-20 px-4 scroll-mt-20"
-    >
+    <div className="bg-[#0f0f0f] text-white pt-28 pb-20 px-4">
       {/* Section Heading */}
       <div className="text-center mb-12">
         <h2 className="text-5xl font-bold">
@@ -126,9 +126,12 @@ const Contact = () => {
           >
             Submit Now
           </button>
+          {result && (
+            <p className="text-sm mt-2 text-green-400 font-medium">{result}</p>
+          )}
         </form>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
+import { useLocation, useNavigate } from "react-router-dom";
 
-const Navbar = ({ activeSection, setActiveSection, setShowTimeline }) => {
+const Navbar = ({ activeSection, setActiveSection }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const navItems = [
     { label: "Home", section: "home" },
@@ -12,19 +15,57 @@ const Navbar = ({ activeSection, setActiveSection, setShowTimeline }) => {
     { label: "Contact", section: "contact" },
   ];
 
+  // const handleClick = (id) => {
+  //   // if (location.pathname !== "/") {
+  //   //   navigate(`/#${id}`);
+  //   // }
+  //   if (location.pathname !== "/") {
+  //     navigate("/", { state: { scrollTo: id } });
+  //   } else {
+  //     const el = document.getElementById(id);
+  //     if (el) {
+  //       el.scrollIntoView({ behavior: "smooth" });
+  //       setActiveSection(id);
+  //     }
+  //   }
+  //   setIsOpen(false); // Close mobile menu
+  // };
+  // const handleClick = (id) => {
+  //   setIsOpen(false); // Close mobile menu
+
+  //   if (location.pathname !== "/") {
+  //     // If not on home, navigate and tell LandingPage to scroll
+  //     navigate("/", { state: { scrollTo: id } });
+  //   } else {
+  //     // Already on homepage — scroll directly
+  //     const el = document.getElementById(id);
+  //     if (el) {
+  //       el.scrollIntoView({ behavior: "smooth" });
+  //       setActiveSection(id);
+  //     }
+  //   }
+  // };
   const handleClick = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    setIsOpen(false); // Close mobile menu
+
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTo: id }, replace: true });
+    } else {
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+          setActiveSection(id);
+        }
+      }, 300); // Wait for mobile menu to collapse
     }
-    setActiveSection(id);
-    setIsOpen(false);
   };
 
   return (
     <nav className="w-full bg-[#0f0f0f] text-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
+          {/* Logo */}
           <div className="flex items-center space-x-2 -ml-14">
             <svg
               viewBox="0 0 200 120"
@@ -34,11 +75,11 @@ const Navbar = ({ activeSection, setActiveSection, setShowTimeline }) => {
               <g transform="translate(100, 60) scale(1.5)">
                 <path
                   d="M -35 0
-         C -35 -20, -15 -20, -5 0
-         C 5 20, 25 20, 35 0
-         C 25 -20, 5 -20, -5 0
-         C -15 20, -35 20, -35 0
-         Z"
+                     C -35 -20, -15 -20, -5 0
+                     C 5 20, 25 20, 35 0
+                     C 25 -20, 5 -20, -5 0
+                     C -15 20, -35 20, -35 0
+                     Z"
                   fill="url(#grad)"
                 />
                 <defs>

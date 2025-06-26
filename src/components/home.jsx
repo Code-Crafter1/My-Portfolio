@@ -1,9 +1,14 @@
+import { useNavigate } from "react-router-dom";
+
 const Home = () => {
+  const navigate = useNavigate();
+
+  const handleConnectClick = () => {
+    navigate("/", { state: { scrollTo: "contact" } });
+  };
+
   return (
-    <section
-      id="home"
-      className="w-full min-h-screen bg-[#0f0f0f] text-white flex items-center justify-center px-4 py-6 -mt-25"
-    >
+    <div className="w-full min-h-screen bg-[#0f0f0f] text-white flex items-center justify-center px-4 py-6 -mt-25">
       <div className="max-w-7xl w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12">
         {/* 📝 Left Side: Text Content */}
         <div className="flex-1 text-center md:text-left">
@@ -20,12 +25,12 @@ const Home = () => {
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
-            <a
-              href="#contact"
+            <button
+              onClick={handleConnectClick}
               className="bg-gradient-to-r from-purple-500 to-orange-400 text-white px-6 py-3 rounded-full font-semibold hover:opacity-90 transition"
             >
               Connect With Me!
-            </a>
+            </button>
             <a
               href="/resume.pdf"
               target="_blank"
@@ -48,8 +53,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
-
 export default Home;

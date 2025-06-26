@@ -27,10 +27,7 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section
-      id="skills"
-      className="bg-[#0f0f0f] text-white pt-28 pb-20 px-4 scroll-mt-20"
-    >
+    <div className="bg-[#0f0f0f] text-white pt-28 pb-20 px-4">
       {/* Section Heading */}
       <div className="text-center mb-12">
         <h2 className="text-5xl font-extrabold mb-3">
@@ -80,7 +77,7 @@ const Skills = () => {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -1,7 +1,21 @@
 import { FiGithub, FiInstagram, FiLinkedin, FiTwitter } from "react-icons/fi";
-import { Link } from "react-scroll";
+import { useLocation, useNavigate } from "react-router-dom";
 
-const Footer = ({ setShowTimeline }) => {
+const Footer = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleScrollToContact = () => {
+    if (location.pathname === "/") {
+      const el = document.getElementById("contact");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      navigate("/", { state: { scrollTo: "contact" } });
+    }
+  };
+
   return (
     <footer className="bg-[#0f0f0f] text-white px-6 pt-8 pb-6">
       {/* Top Content */}
@@ -54,7 +68,7 @@ const Footer = ({ setShowTimeline }) => {
           </p>
         </div>
 
-        {/* Right Section: Social Icons (centered on small screens) */}
+        {/* Right Section: Social Icons */}
         <div className="w-full md:w-auto mt-4 md:mt-35 flex justify-center md:justify-end">
           <div className="flex space-x-6">
             <a
@@ -114,13 +128,12 @@ const Footer = ({ setShowTimeline }) => {
           >
             Privacy Policy
           </a>
-
-          <a
-            href="#contact"
+          <button
+            onClick={handleScrollToContact}
             className="hover:underline hover:underline-offset-4 hover:decoration-white transition"
           >
             Connect with me
-          </a>
+          </button>
         </div>
       </div>
     </footer>

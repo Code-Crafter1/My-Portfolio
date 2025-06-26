@@ -1,10 +1,6 @@
-const About = ({ innerRef }) => {
+const About = () => {
   return (
-    <section
-      id="about"
-      ref={innerRef}
-      className="bg-[#0f0f0f] text-white py-20 px-6 scroll-mt-24"
-    >
+    <div className="bg-[#0f0f0f] text-white py-20 px-6 scroll-mt-24">
       {/* Section Heading */}
       <div className="text-center mt-8 mb-16">
         <h2 className="text-5xl font-bold">
@@ -63,7 +59,7 @@ const About = ({ innerRef }) => {
           </ul>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
