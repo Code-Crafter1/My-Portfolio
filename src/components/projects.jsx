@@ -76,7 +76,7 @@ const Projects = () => {
               className="w-full h-48 object-cover"
             />
             <div className="p-5 flex flex-col justify-between flex-grow">
-              <h3 className="text-xl font-semibold mb-4">{project.title}</h3>
+              {/* <h3 className="text-xl font-semibold mb-4">{project.title}</h3>
               <div className="flex items-center justify-between mt-auto">
                 <a
                   href={project.github}
@@ -85,14 +85,25 @@ const Projects = () => {
                   className="bg-gradient-to-r from-pink-500 to-orange-400 text-white px-4 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform"
                 >
                   GitHub
-                </a>
-                <a
+                </a> */}
+              {/* <a
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-cyan-400 hover:underline text-sm font-medium"
                 >
                   Read More →
+                </a> */}
+              {/* </div> */}
+              <div className="flex items-center justify-between mb-1">
+                <h3 className="text-xl font-semibold">{project.title}</h3>
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gradient-to-r from-pink-500 to-orange-400 text-white px-4 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform"
+                >
+                  GitHub
                 </a>
               </div>
             </div>

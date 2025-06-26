@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Project from "./components/Project/Project"; // timeline page
+import ProjectDetail from "./components/ProjectDetail";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 
@@ -103,6 +104,16 @@ const router = createBrowserRouter([
   {
     path: "/projects/timeline",
     element: <TimelinePage />,
+  },
+  {
+    path: "/projects/:id", // ✅ project detail route
+    element: (
+      <>
+        <Navbar activeSection="projects" setActiveSection={() => {}} />
+        <ProjectDetail />
+        <Footer />
+      </>
+    ),
   },
   {
     path: "*",
