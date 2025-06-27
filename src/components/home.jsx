@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
+import profileImg from "../assets/images/portfolio3.jpg";
+
 const Home = () => {
   const navigate = useNavigate();
 
@@ -46,7 +48,7 @@ const Home = () => {
         <div className="flex-1 flex justify-center">
           <div className="w-40 h-40 sm:w-78 sm:h-78 md:w-78 md:h-78 rounded-full overflow-hidden border-4 border-pink-300">
             <img
-              src="src\assets\images\portfolio3.jpg" // Replace with your actual image path
+              src={profileImg} // Replace with your actual image path
               alt="Sakshi"
               className="w-full h-full object-cover"
             />

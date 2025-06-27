@@ -1,3 +1,5 @@
+import aboutImg from "../assets/images/portfolio2.jpg";
+
 const About = () => {
   return (
     <div className="bg-[#0f0f0f] text-white py-20 px-6 scroll-mt-24">
@@ -16,7 +18,7 @@ const About = () => {
         <div className="w-full md:w-1/2 flex justify-center">
           <div className="w-74 h-90 bg-[#1a1a1a] shadow-lg overflow-hidden rounded-xl border-4 border-pink-300">
             <img
-              src="src\assets\images\portfolio2.jpg"
+              src={aboutImg}
               alt="Sakshi"
               className="w-full h-full object-cover"
             />
