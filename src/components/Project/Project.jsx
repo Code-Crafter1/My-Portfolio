@@ -20,7 +20,7 @@ const Project = () => {
     <div className="project-timeline">
       {/* 🔙 Back button */}
       <button onClick={handleBack} className="back-button">
-        ← Back to Projects
+        ← Go Back
       </button>
 
       <h2 className="text-5xl font-bold project-title">
