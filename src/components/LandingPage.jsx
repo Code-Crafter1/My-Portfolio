@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 
-import About from "./About";
-import Contact from "./Contact";
+import About from "./about";
+import Contact from "./contact";
 import Footer from "./Footer";
-import Home from "./Home";
-import Navbar from "./Navbar";
-import Projects from "./Projects";
+import Home from "./home";
+import Navbar from "./navbar";
+import Projects from "./projects";
 import Skills from "./Skills";
 
 const LandingPage = () => {

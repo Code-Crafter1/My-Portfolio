@@ -6,9 +6,9 @@ import {
 
 import Footer from "./components/Footer";
 import LandingPage from "./components/LandingPage";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar";
 import PrivacyPolicy from "./components/PrivacyPolicy";
-import Project from "./components/Project/Project";
+import Project from "./components/Project/project";
 import ProjectDetail from "./components/ProjectDetail";
 import Services from "./components/Services";
 
