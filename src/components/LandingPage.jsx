@@ -7,7 +7,7 @@ import Footer from "./Footer";
 import Home from "./home";
 import Navbar from "./navbar";
 import Projects from "./projects";
-import Skills from "./Skills";
+import Skills from "./skills";
 
 const LandingPage = () => {
   const [activeSection, setActiveSection] = useState("home");
