@@ -14,9 +14,9 @@ const About = () => {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-14">
         {/* Image Box */}
         <div className="w-full md:w-1/2 flex justify-center">
-          <div className="w-72 h-85 bg-[#1a1a1a] shadow-lg overflow-hidden rounded-xl">
+          <div className="w-74 h-90 bg-[#1a1a1a] shadow-lg overflow-hidden rounded-xl border-4 border-pink-300">
             <img
-              src="/your-image.jpg"
+              src="src\assets\images\portfolio2.jpg"
               alt="Sakshi"
               className="w-full h-full object-cover"
             />

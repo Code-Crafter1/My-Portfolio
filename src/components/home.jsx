@@ -44,9 +44,9 @@ const Home = () => {
 
         {/* 👤 Right Side: Profile Image */}
         <div className="flex-1 flex justify-center">
-          <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white shadow-lg grayscale hover:grayscale-0 transition duration-300">
+          <div className="w-40 h-40 sm:w-78 sm:h-78 md:w-78 md:h-78 rounded-full overflow-hidden border-4 border-pink-300">
             <img
-              src="/your-image.jpg" // Replace with your actual image path
+              src="src\assets\images\portfolio3.jpg" // Replace with your actual image path
               alt="Sakshi"
               className="w-full h-full object-cover"
             />

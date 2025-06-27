@@ -5,6 +5,8 @@ const ProjectDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
+  window.scrollTo(0, 0);
+
   const project = MyWork.find((item) => item.id === id);
 
   if (!project) {

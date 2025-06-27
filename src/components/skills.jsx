@@ -17,7 +17,7 @@ const skills = [
   },
   {
     name: "Tailwind CSS",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
   },
   {
     name: "Git",

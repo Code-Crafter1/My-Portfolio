@@ -7,8 +7,10 @@ import {
 import Footer from "./components/Footer";
 import LandingPage from "./components/LandingPage";
 import Navbar from "./components/Navbar";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 import Project from "./components/Project/Project";
 import ProjectDetail from "./components/ProjectDetail";
+import Services from "./components/Services";
 
 // Timeline Page Layout
 const TimelinePage = () => (
@@ -41,6 +43,26 @@ const router = createBrowserRouter([
   {
     path: "/projects/:id",
     element: <ProjectDetailPage />,
+  },
+  {
+    path: "/terms",
+    element: (
+      <>
+        <Navbar activeSection="" setActiveSection={() => {}} />
+        <Services />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: "/privacy",
+    element: (
+      <>
+        <Navbar activeSection="" setActiveSection={() => {}} />
+        <PrivacyPolicy />
+        <Footer />
+      </>
+    ),
   },
   {
     path: "*",

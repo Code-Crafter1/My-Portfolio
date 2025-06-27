@@ -11,8 +11,11 @@ import "./Project.css";
 const Project = () => {
   const navigate = useNavigate(); // ✅ hook for navigation
 
+  window.scrollTo(0, 0);
+
   const handleBack = () => {
-    navigate("/#projects"); // ✅ goes back to Projects section on homepage
+    // navigate("/#projects"); // ✅ goes back to Projects section on homepage
+    navigate("/", { state: { scrollTo: "projects" } });
   };
   return (
     <div className="project-timeline">
