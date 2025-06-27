@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 import profileImg from "../assets/images/portfolio3.jpg";
+import resumePDF from "../assets/images/portfolio_resume.pdf";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -34,7 +35,7 @@ const Home = () => {
               Connect With Me!
             </button>
             <a
-              href="/resume.pdf"
+              href={resumePDF}
               target="_blank"
               rel="noopener noreferrer"
               className="border border-gray-400 text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-black transition"
