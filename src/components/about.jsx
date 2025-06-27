@@ -35,18 +35,18 @@ const About = () => {
           <ul className="text-gray-300 space-y-3 text-base">
             <li>
               🛠️ <span className="text-white font-semibold">Tech Stack:</span>{" "}
-              React.js, Node.js, Express.js, MongoDB, Tailwind CSS
+              HTML5 , CSS3 , Javascript , React.js , Tailwind.CSS, Bootstrap
             </li>
             <li>
               💡{" "}
               <span className="text-white font-semibold">
                 Currently Exploring:
               </span>{" "}
-              TypeScript, Next.js, Framer Motion
+              API , Next.js, Framer Motion
             </li>
             <li>
               🧰 <span className="text-white font-semibold">Tools:</span> Git,
-              GitHub, VS Code, Vercel, Netlify
+              GitHub, VS Code , Netlify
             </li>
             <li>
               🚀 <span className="text-white font-semibold">Passion:</span>{" "}
@@ -54,7 +54,7 @@ const About = () => {
             </li>
             <li>
               🎯 <span className="text-white font-semibold">Fun Fact:</span> I
-              debug faster while listening to Taylor Swift 🎧💻
+              love turning coffee into clean code and UI magic ☕✨
             </li>
           </ul>
         </div>

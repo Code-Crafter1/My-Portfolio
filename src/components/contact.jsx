@@ -10,8 +10,6 @@ const Contact = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = async (event) => {
-    // e.preventDefault();
-    // handle submission logic here
     event.preventDefault();
     setResult("Sending....");
     const formData = new FormData(event.target);
@@ -54,7 +52,6 @@ const Contact = () => {
         {/* Left Side */}
         <div>
           <h3 className="text-3xl font-bold mb-4">
-            {/* <span className="bg-gradient-to-r from-red-500 via-orange-400 to-green-400 text-transparent bg-clip-text"> */}
             <span className="bg-gradient-to-r from-orange-400 to-pink-500 text-transparent bg-clip-text">
               Let's talk
             </span>

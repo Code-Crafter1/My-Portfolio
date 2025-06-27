@@ -27,12 +27,6 @@ const ProjectDetail = () => {
         </button>
       </div>
 
-      {/* Project Image */}
-      {/* <img
-        src={project.image}
-        alt={project.name}
-        className="w-full max-w-4xl mx-auto rounded-lg mb-8 object-cover"
-      /> */}
       <img
         src={project.image}
         alt={project.name}

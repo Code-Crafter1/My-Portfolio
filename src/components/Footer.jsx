@@ -116,20 +116,6 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto -mt-3 flex flex-col md:flex-row justify-between items-center text-sm text-white space-y-2 md:space-y-0">
         <p>© {new Date().getFullYear()} Sakshi. All rights reserved.</p>
         <div className="flex space-x-4">
-          {/* <a
-            href="#terms"
-            className="hover:underline hover:underline-offset-4 hover:decoration-white transition"
-          >
-            Terms of Service
-          </a> */}
-
-          {/* <a
-            href="#privacy"
-            className="hover:underline hover:underline-offset-4 hover:decoration-white transition"
-          >
-            Privacy Policy
-          </a> */}
-
           <button
             onClick={() => navigate("/terms")}
             className="hover:underline hover:underline-offset-4 hover:decoration-white transition"

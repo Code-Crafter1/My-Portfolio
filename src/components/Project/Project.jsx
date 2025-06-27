@@ -14,7 +14,6 @@ const Project = () => {
   window.scrollTo(0, 0);
 
   const handleBack = () => {
-    // navigate("/#projects"); // ✅ goes back to Projects section on homepage
     navigate("/", { state: { scrollTo: "projects" } });
   };
   return (
@@ -23,8 +22,7 @@ const Project = () => {
       <button onClick={handleBack} className="back-button">
         ← Back to Projects
       </button>
-      {/* <h1 className="project-title">Projects</h1> */}
-      {/* <h1 className="project-title gradient-text">Projects</h1> */}
+
       <h2 className="text-5xl font-bold project-title">
         <span className="bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text">
           Projects

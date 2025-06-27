@@ -15,36 +15,6 @@ const Navbar = ({ activeSection, setActiveSection }) => {
     { label: "Contact", section: "contact" },
   ];
 
-  // const handleClick = (id) => {
-  //   // if (location.pathname !== "/") {
-  //   //   navigate(`/#${id}`);
-  //   // }
-  //   if (location.pathname !== "/") {
-  //     navigate("/", { state: { scrollTo: id } });
-  //   } else {
-  //     const el = document.getElementById(id);
-  //     if (el) {
-  //       el.scrollIntoView({ behavior: "smooth" });
-  //       setActiveSection(id);
-  //     }
-  //   }
-  //   setIsOpen(false); // Close mobile menu
-  // };
-  // const handleClick = (id) => {
-  //   setIsOpen(false); // Close mobile menu
-
-  //   if (location.pathname !== "/") {
-  //     // If not on home, navigate and tell LandingPage to scroll
-  //     navigate("/", { state: { scrollTo: id } });
-  //   } else {
-  //     // Already on homepage — scroll directly
-  //     const el = document.getElementById(id);
-  //     if (el) {
-  //       el.scrollIntoView({ behavior: "smooth" });
-  //       setActiveSection(id);
-  //     }
-  //   }
-  // };
   const handleClick = (id) => {
     setIsOpen(false); // Close mobile menu
 

@@ -22,7 +22,7 @@ const MyWork = [
     fullDescription:
       "I built my personal portfolio website to showcase my projects, skills, and experience as a frontend developer. It’s fully responsive and designed with a modern UI using React.js and Tailwind CSS. Smooth scrolling, animated transitions, and interactive sections enhance the user experience. This site serves as a central hub for recruiters and collaborators to connect with me.",
     technologies: ["React", "Tailwind CSS", "CSS", "React Router"],
-    github: "https://github.com/yourusername/portfolio",
+    github: "https://github.com/Code-Crafter1/My-Portfolio.git",
     live: "https://yourportfolio.com",
   },
   {
@@ -34,7 +34,7 @@ const MyWork = [
     fullDescription:
       "I built a Weather App using React, CSS, and OpenWeather API to display real-time weather conditions of any searched location. The app fetches live data through API calls and presents temperature, weather status, and other key metrics. It features a clean, responsive UI built with CSS. This project demonstrates my skills in working with APIs and dynamic React components.",
     technologies: ["React", "API", "CSS"],
-    github: "https://github.com/yourusername/weather-app",
+    github: "https://github.com/Code-Crafter1/Weather-App.git",
     live: "https://weather2926.netlify.app/",
   },
   {
@@ -46,7 +46,7 @@ const MyWork = [
     fullDescription:
       "FeedX is a dynamic web platform whose frontend I designed using React, Tailwind CSS, and some custom CSS. It was developed during Hackfest, a hackathon hosted at IIT Dhanbad, where our team emerged as winners in our problem statement. The site delivers a clean UI and smooth user experience tailored to our challenge. It reflects my ability to build scalable, responsive interfaces under real hackathon conditions.",
     technologies: ["React", "API", "CSS", "Tailwind CSS", "Javascript"],
-    github: "https://github.com/yourusername/weather-app",
+    github: "https://github.com/HarryOhm33/FeedX.git",
     live: "https://weather2926.netlify.app/",
   },
   {
@@ -58,7 +58,7 @@ const MyWork = [
     fullDescription:
       "I created a Simon Says Game using HTML, CSS, and JavaScript, inspired by the classic memory challenge. The game lights up buttons in a sequence that players must repeat, getting progressively harder. JavaScript powers the dynamic interactions, sequence logic, and game state. It’s a fun way to showcase my ability to handle interactivity and logic with pure JavaScript.",
     technologies: ["HTML", "CSS", "Javascript"],
-    github: "https://github.com/yourusername/weather-app",
+    github: "https://github.com/Code-Crafter1/Simon-Says.git",
     live: "https://weather2926.netlify.app/",
   },
   {
@@ -70,7 +70,7 @@ const MyWork = [
     fullDescription:
       "I created Mithila Mart using HTML, CSS, and JavaScript as a prototype to showcase my idea of a unified platform for selling all products from the Mithila region. The project features a simple, user-friendly interface designed to highlight regional goods. It demonstrates basic interactivity and layout skills. This prototype was built primarily for idea presentation purposes.",
     technologies: ["HTML", "CSS", "Javascript"],
-    github: "https://github.com/yourusername/weather-app",
+    github: "https://github.com/Code-Crafter1/Mithila-Mart.git",
     live: "https://weather2926.netlify.app/",
   },
   {
@@ -82,10 +82,10 @@ const MyWork = [
     fullDescription:
       "I built a Spotify Clone using HTML and CSS, replicating Spotify’s web interface with a sidebar, top navbar, playlist section, and a styled music player footer. The layout is fully responsive, using Flexbox and Grid. Though static, it showcases my front-end design skills and ability to recreate real-world UIs.",
     technologies: ["React", "API", "CSS"],
-    github: "https://github.com/yourusername/weather-app",
+    github: "https://github.com/Code-Crafter1/Spotify_Clone.git",
     live: "https://weather2926.netlify.app/",
   },
-  // Add more projects here as needed
+ 
 ];
 
 export default MyWork;
