@@ -23,7 +23,7 @@ const MyWork = [
       "I built my personal portfolio website to showcase my projects, skills, and experience as a frontend developer. It’s fully responsive and designed with a modern UI using React.js and Tailwind CSS. Smooth scrolling, animated transitions, and interactive sections enhance the user experience. This site serves as a central hub for recruiters and collaborators to connect with me.",
     technologies: ["React", "Tailwind CSS", "CSS", "React Router"],
     github: "https://github.com/Code-Crafter1/My-Portfolio.git",
-    live: "https://yourportfolio.com",
+    live: "https://my-portfolio92.netlify.app",
   },
   {
     id: "weather-app",
