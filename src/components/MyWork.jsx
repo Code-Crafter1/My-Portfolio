@@ -83,7 +83,7 @@ const MyWork = [
       "I built a Spotify Clone using HTML and CSS, replicating Spotify’s web interface with a sidebar, top navbar, playlist section, and a styled music player footer. The layout is fully responsive, using Flexbox and Grid. Though static, it showcases my front-end design skills and ability to recreate real-world UIs.",
     technologies: ["React", "API", "CSS"],
     github: "https://github.com/Code-Crafter1/Spotify_Clone.git",
-    live: "https:spotify-clone2926.netlify.app",
+    live: "https://spotify-clone2926.netlify.app",
   },
 ];
 
