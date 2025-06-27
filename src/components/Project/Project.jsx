@@ -8,7 +8,7 @@ import MyWork from "../MyWork";
 
 import "./Project.css";
 
-const Project = () => {
+const project = () => {
   const navigate = useNavigate(); // ✅ hook for navigation
 
   window.scrollTo(0, 0);
@@ -71,4 +71,4 @@ const Project = () => {
   );
 };
 
-export default Project;
+export default project;
