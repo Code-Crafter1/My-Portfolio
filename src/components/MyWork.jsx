@@ -1,7 +1,7 @@
 import feedxImg from "../assets/images/feedx.png";
-import mithilaImg from "../assets/images/mithila.png";
 import portfolioImg from "../assets/images/portfolio.png";
 import simonImg from "../assets/images/simongame.png";
+import skill_basedImg from "../assets/images/skill_based.png";
 import spotifyImg from "../assets/images/spotify.png";
 import weatherImg from "../assets/images/weatherapp.png";
 
@@ -62,16 +62,17 @@ const MyWork = [
     live: "https://simonsay2.netlify.app",
   },
   {
-    id: "Mithila-mart",
-    name: "Mithila Mart",
-    image: mithilaImg,
+    id: "Hire-Easy",
+    name: "Hire Easy",
+    image: skill_basedImg,
     icon: mithilaIcon,
-    miniDescription: "E-commerce platform for Mithila artworks.",
+    miniDescription:
+      "HireEasy enables skill-based hiring for smarter recruitment.",
     fullDescription:
-      "I created Mithila Mart using HTML, CSS, and JavaScript as a prototype to showcase my idea of a unified platform for selling all products from the Mithila region. The project features a simple, user-friendly interface designed to highlight regional goods. It demonstrates basic interactivity and layout skills. This prototype was built primarily for idea presentation purposes.",
-    technologies: ["HTML", "CSS", "Javascript"],
-    github: "https://github.com/Code-Crafter1/Mithila-Mart.git",
-    live: "https://mithila-mart.netlify.app",
+      "Hire Easy is a skill based recruitment platform built with React and Tailwind CSS. It enables recruiters to hire based on real skills instid of traditional resumes.The app features a responsive UI for different filtering,evaluation, & hiring. It was developed during hackathon, showcasing quick problem-solving & real world impact .",
+    technologies: ["React", "CSS", "Javascript", "TailwindCSS"],
+    github: "https://github.com/HarryOhm33/We-Hack.git",
+    live: "https://easy-hire-seekers.netlify.app/",
   },
   {
     id: "Spotify-clone",
