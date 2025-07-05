@@ -5,6 +5,9 @@ import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [result, setResult] = useState("");
+  // added for otp
+  const [showOtp, setShowOtp] = useState(false);
+  const [otp, setOtp] = useState("");
 
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -33,7 +36,6 @@ const Contact = () => {
       console.log("Error", data);
       setResult(data.message);
     }
-    
   };
 
   return (
@@ -92,18 +94,69 @@ const Contact = () => {
               placeholder="Enter Your Name"
             />
           </div>
+          {/* <div>
+            <label className="block mb-2 text-sm font-medium">Your Email</label>
+            <div className="flex gap-2">
+              <input
+                type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-3 rounded-md bg-[#1a1a1a] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-pink-500"
+                placeholder="Enter Your Email"
+              />
+              <button
+                type="button"
+                className="bg-gradient-to-r from-pink-500 to-orange-400 text-white px-2 py-1 rounded-md font-semibold hover:bg-pink-600 transition whitespace-nowrap"
+              >
+                Send OTP
+              </button>
+            </div>
+            
+          </div> */}
           <div>
             <label className="block mb-2 text-sm font-medium">Your Email</label>
-            <input
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-3 rounded-md bg-[#1a1a1a] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-pink-500"
-              placeholder="Enter Your Email"
-            />
+            <div className="flex gap-2">
+              <input
+                type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-3 rounded-md bg-[#1a1a1a] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-pink-500"
+                placeholder="Enter Your Email"
+              />
+              <button
+                type="button"
+                onClick={() => setShowOtp(true)}
+                className="bg-gradient-to-r from-pink-500 to-orange-400 text-white px-3 py-2 rounded-md font-semibold hover:bg-pink-600 transition whitespace-nowrap"
+              >
+                Send OTP
+              </button>
+            </div>
+
+            {showOtp && (
+              <div className="flex gap-2 mt-2">
+                <input
+                  type="text"
+                  name="otp"
+                  value={otp}
+                  onChange={(e) => setOtp(e.target.value)}
+                  placeholder="Enter OTP"
+                  className="flex-grow px-4 py-3 rounded-md bg-[#1a1a1a] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-pink-500"
+                />
+                <button
+                  type="button"
+                  onClick={() => console.log("OTP submitted:", otp)}
+                  className="bg-gradient-to-r from-green-500 to-green-700 text-white px-1 py-0 rounded-md font-semibold hover:bg-green-600 transition whitespace-nowrap"
+                >
+                  Submit OTP
+                </button>
+              </div>
+            )}
           </div>
+
           <div>
             <label className="block mb-2 text-sm font-medium">
               Write Your Message Here
