@@ -33,7 +33,7 @@ const Contact = () => {
       console.log("Error", data);
       setResult(data.message);
     }
-    // console.log(form);
+    
   };
 
   return (

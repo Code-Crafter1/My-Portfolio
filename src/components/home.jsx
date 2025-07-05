@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <div className="w-full min-h-screen bg-[#0f0f0f] text-white flex items-center justify-center px-4 py-6 -mt-25">
       <div className="max-w-7xl w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12">
-        {/* 📝 Left Side: Text Content */}
+        
         <div className="flex-1 text-center md:text-left">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
             <span className="text-red-400">I'm</span>{" "}
@@ -45,11 +45,11 @@ const Home = () => {
           </div>
         </div>
 
-        {/* 👤 Right Side: Profile Image */}
+        
         <div className="flex-1 flex justify-center">
           <div className="w-40 h-40 sm:w-78 sm:h-78 md:w-78 md:h-78 rounded-full overflow-hidden border-4 border-pink-300">
             <img
-              src={profileImg} // Replace with your actual image path
+              src={profileImg}
               alt="Sakshi"
               className="w-full h-full object-cover"
             />

@@ -17,7 +17,6 @@ const ProjectDetail = () => {
 
   return (
     <div className="text-white bg-[#0f0f0f] min-h-screen px-4 md:px-10 pt-16 md:pt-10 pb-10 relative">
-      {/* 🔙 Back Button */}
       <div className="md:absolute md:top-6 md:left-6 mb-8">
         <button
           onClick={() => navigate("/projects/timeline")}

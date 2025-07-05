@@ -21,7 +21,7 @@ const LandingPage = () => {
     contact: useRef(null),
   };
 
-  // 🔁 Intersection Observer
+  //Intersection Observer
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -39,7 +39,7 @@ const LandingPage = () => {
     };
   }, []);
 
-  // 🔁 Scroll to section on route change (e.g. from Timeline)
+  //  Scroll to section on route change (e.g. from Timeline)
   useEffect(() => {
     if (location.state?.scrollTo) {
       const section = location.state.scrollTo;
@@ -54,7 +54,7 @@ const LandingPage = () => {
     }
   }, [location]);
 
-  // 🔁 Scroll on navbar/footer click
+  //  Scroll on navbar/footer click
   const scrollToSection = (id) => {
     const el = sectionsRef[id]?.current;
     if (el) {

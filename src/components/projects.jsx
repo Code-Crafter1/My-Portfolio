@@ -32,12 +32,10 @@ const Projects = () => {
             <img
               src={project.image}
               alt={project.name}
-              // className="w-full h-48 object-cover"
               className="w-full h-48"
             />
             <div className="p-2 flex flex-col justify-between flex-grow">
               <div className="flex items-center justify-between mb-1">
-                {/* <h3 className="text-xl font-semibold">{project.name}</h3> */}
                 <h3
                   onClick={() => navigate(`/projects/${project.id}`)}
                   className="text-xl font-semibold text-white hover:underline cursor-pointer"

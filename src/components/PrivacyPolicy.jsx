@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 const PrivacyPolicy = () => {
-  // 🔼 Scroll to top on mount
+  //  Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

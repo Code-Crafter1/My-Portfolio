@@ -9,7 +9,7 @@ import MyWork from "../MyWork";
 import "./Project.css";
 
 const Project = () => {
-  const navigate = useNavigate(); // ✅ hook for navigation
+  const navigate = useNavigate(); //hook for navigation
 
   window.scrollTo(0, 0);
 
